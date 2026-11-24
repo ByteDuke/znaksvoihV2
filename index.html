@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ЗНАК СВОИХ — Премиальная студия мерча | Авторский стритвир от 10 единиц</title>
+  <meta name="description" content="Студия мерча «Знак Своих»: создаем вещи, которые объединяют людей, команды и сообщества. Мужская и женская коллекции, худи, футболки, рубашки, брюки и аксессуары.">
+  <meta name="theme-color" content="#0E0E11">
+
+  <!-- Favicon with 4-pointed Star -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23DDBFB4'%3E%3Cpath d='M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Montserrat & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#0E0E11',
+              dark: '#141418',
+              surface: '#1A1A20',
+              cream: '#F5F0E6',
+              'cream-light': '#FAF7F2',
+              'cream-dark': '#E8DFC9',
+              rose: '#DDBFB4',
+              'rose-light': '#EFE2DC',
+              'rose-hover': '#CEABA0',
+              'rose-dark': '#B89284',
+              muted: '#8E8A84'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Montserrat', 'sans-serif'],
+          },
+          boxShadow: {
+            'glow-rose': '0 0 35px -5px rgba(221, 191, 180, 0.35)',
+            'glow-cream': '0 0 30px -5px rgba(245, 240, 230, 0.2)',
+            'card': '0 10px 30px -10px rgba(0, 0, 0, 0.6)',
+            'soft': '0 4px 20px rgba(0, 0, 0, 0.08)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet with Luxury Gradients & Staggered Animations -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-brand-black text-brand-cream font-sans antialiased selection:bg-brand-rose selection:text-brand-black overflow-x-hidden">
+
+  <!-- Ambient Luxury Moving Mesh Gradients (No noise speckles) -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="ambient-orb-1 absolute top-[-10%] left-[-8%] w-[55vw] h-[55vw] bg-brand-rose/6 rounded-full blur-[150px]"></div>
+    <div class="ambient-orb-2 absolute bottom-[15%] right-[-10%] w-[48vw] h-[48vw] bg-brand-rose/5 rounded-full blur-[170px]"></div>
+    <div class="absolute top-[45%] left-[25%] w-[35vw] h-[35vw] bg-brand-cream/3 rounded-full blur-[140px]"></div>
+  </div>
+
+  <!-- 1. HEADER / NAVIGATION (Fixed Overlap Bug) -->
+  <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-white/[0.08] backdrop-blur-xl bg-brand-black/90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-rose rounded-lg p-1">
+        <div class="relative w-8 h-8 flex items-center justify-center text-brand-rose transition-transform duration-500 group-hover:rotate-90">
+          <svg class="w-7 h-7 drop-shadow-sm" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-extrabold text-base sm:text-lg tracking-wider text-white group-hover:text-brand-rose transition-colors">ЗНАК СВОИХ</span>
+          <span class="text-[9px] tracking-[0.26em] text-brand-rose uppercase font-medium">Студия мерча</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden xl:flex items-center gap-6 lg:gap-7 text-sm font-medium text-brand-cream/80">
+        <a href="#about" class="hover:text-brand-rose transition-colors duration-200">Концепт</a>
+        <a href="#lookbook" class="hover:text-brand-rose transition-colors duration-200 flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-rose animate-pulse"></span>
+          <span>Lookbook</span>
+        </a>
+        <a href="#catalog" class="hover:text-brand-rose transition-colors duration-200">Каталог</a>
+        <a href="#usp" class="hover:text-brand-rose transition-colors duration-200">Преимущества</a>
+        <a href="#audience" class="hover:text-brand-rose transition-colors duration-200">Аудитория</a>
+        <a href="#competitors" class="hover:text-brand-rose transition-colors duration-200">Сравнение</a>
+        <a href="#roadmap" class="hover:text-brand-rose transition-colors duration-200">Роадмап</a>
+        <a href="#calculator" class="hover:text-brand-rose transition-colors duration-200">Калькулятор</a>
+        <a href="#contacts" class="hover:text-brand-rose transition-colors duration-200">Контакты</a>
+      </nav>
+
+      <!-- Right Action & Mobile Trigger -->
+      <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+        <button onclick="openLeadModal('Хедер: Оставить заявку')" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-rose text-brand-black font-semibold text-xs uppercase tracking-wider hover:bg-brand-rose-hover transition-all duration-300 hover:shadow-glow-rose active:scale-95 whitespace-nowrap shrink-0">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+          </svg>
+          <span>Оставить заявку</span>
+        </button>
+
+        <!-- Mobile Menu Trigger -->
+        <button id="mobileMenuBtn" aria-label="Открыть меню" class="xl:hidden p-2 text-brand-cream hover:text-brand-rose focus:outline-none">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="xl:hidden fixed inset-x-0 top-20 bg-brand-dark/98 backdrop-blur-2xl border-b border-white/10 px-6 py-8 transform -translate-y-full opacity-0 pointer-events-none transition-all duration-300 ease-in-out shadow-2xl">
+      <div class="flex flex-col gap-3 text-base font-medium">
+        <a href="#about" class="mobile-nav-link text-brand-cream hover:text-brand-rose py-2 border-b border-white/5">Проблема & Решение</a>
+        <a href="#lookbook" class="mobile-nav-link text-brand-rose hover:text-white py-2 border-b border-white/5 flex items-center justify-between">
+          <span>Lookbook (Коллекция на моделях)</span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-brand-rose/20 text-brand-rose">NEW</span>
+        </a>
+        <a href="#catalog" class="mobile-nav-link text-brand-cream hover:text-brand-rose py-2 border-b border-white/5">Каталог продукции</a>
+        <a href="#usp" class="mobile-nav-link text-brand-cream hover:text-brand-rose py-2 border-b border-white/5">Почему мы (УТП)</a>
+        <a href="#audience" class="mobile-nav-link text-brand-cream hover:text-brand-rose py-2 border-b border-white/5">Кому подходит</a>
+        <a href="#competitors" class="mobile-nav-link text-brand-cream hover:text-brand-rose py-2 border-b border-white/5">Сравнение с рынком</a>
+        <a href="#roadmap" class="mobile-nav-link text-brand-cream hover:text-brand-rose py-2 border-b border-white/5">План развития</a>
+        <a href="#calculator" class="mobile-nav-link text-brand-cream hover:text-brand-rose py-2 border-b border-white/5">Онлайн-калькулятор</a>
+        <a href="#contacts" class="mobile-nav-link text-brand-cream hover:text-brand-rose py-2 border-b border-white/5">Контакты</a>
+        <div class="pt-4">
+          <button onclick="openLeadModal('Заявка из мобильного меню')" class="w-full flex justify-center items-center gap-2 py-3.5 rounded-full bg-brand-rose text-brand-black font-bold text-xs uppercase tracking-wider">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+            </svg>
+            Оставить заявку
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 pt-20">
+
+        <!-- 1. INTERACTIVE 2D CLOTHES RACK HERO (PURE SVG TECHNICAL SKETCHES) -->
+    <section id="heroRackSection" class="relative min-h-[96vh] flex flex-col justify-between overflow-hidden bg-[#F2F2F0] text-[#141416] border-b border-black/10 select-none pt-24 pb-10">
+      
+      <!-- Studio Lighting & Subtle Grid Vignette -->
+      <div class="absolute inset-0 pointer-events-none z-0">
+        <!-- Top spotlight -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[90vw] max-w-4xl h-[400px] bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.95)_0%,_rgba(242,242,240,0)_70%)]"></div>
+        <!-- Ambient floor soft shadow under garments -->
+        <div class="absolute bottom-28 left-1/2 -translate-x-1/2 w-[75vw] max-w-3xl h-[60px] bg-[radial-gradient(ellipse_at_center,_rgba(0,0,0,0.08)_0%,_transparent_75%)] blur-md"></div>
+      </div>
+
+      <!-- Top Bar: Brand Title & Navigation Controls -->
+      <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+        
+        <!-- Mode B Return Button (Initially Hidden) -->
+        <div id="rackBackNav" class="absolute left-4 sm:left-8 top-0 transition-all duration-300 opacity-0 pointer-events-none -translate-x-3">
+          <button 
+            type="button" 
+            onclick="exitFocusedMode()" 
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 hover:bg-white text-[#1C1C1E] border border-black/10 shadow-sm text-xs font-semibold uppercase tracking-wider transition-all hover:shadow hover:-translate-x-0.5 active:scale-95"
+          >
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+            <span>Назад на рейку</span>
+          </button>
+        </div>
+
+        <!-- Mode B Front / Back Capsule Toggle (Initially Hidden) -->
+        <div id="rackViewToggleContainer" class="absolute right-4 sm:right-8 top-0 transition-all duration-300 opacity-0 pointer-events-none translate-x-3">
+          <div class="inline-flex items-center p-1 rounded-full bg-[#E5E5E0] border border-black/10 shadow-inner relative">
+            <div id="rackFlipPill" class="absolute top-1 bottom-1 w-[calc(50%-4px)] rounded-full bg-[#1C1C1E] transition-all duration-300 left-1 shadow-sm"></div>
+            <button 
+              type="button" 
+              onclick="setRackViewSide('front')" 
+              id="rackBtnFront" 
+              class="relative z-10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider transition-colors text-white"
+            >
+              Спереди
+            </button>
+            <button 
+              type="button" 
+              onclick="setRackViewSide('back')" 
+              id="rackBtnBack" 
+              class="relative z-10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider transition-colors text-[#6E6E73] hover:text-[#1C1C1E]"
+            >
+              Сзади
+            </button>
+          </div>
+        </div>
+
+        <!-- Center Brand Header -->
+        <div id="rackMainHeader" class="transition-all duration-300">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-black/10 bg-white/60 backdrop-blur-sm mb-3">
+            <svg class="w-3.5 h-3.5 text-[#B89284]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+            </svg>
+            <span class="text-[10px] sm:text-xs uppercase tracking-[0.24em] font-bold text-[#48484A]">Интерактивный гардероб · Мерч от 10 единиц</span>
+          </div>
+          <h1 class="font-display font-black text-3xl sm:text-5xl md:text-6xl text-[#141416] tracking-tight uppercase">
+            ЗНАК СВОИХ
+          </h1>
+          <p id="rackHeaderSubtitle" class="text-xs sm:text-sm text-[#6E6E73] mt-1 max-w-lg mx-auto font-normal">
+            Выберите вещь на рейке для детального осмотра фактуры, лекал и фурнитуры
+          </p>
+        </div>
+
+      </div>
+
+      <!-- MAIN CLOTHES RACK STAGE (3D Clothes Rail) -->
+      <div class="relative z-10 w-full my-auto py-6 sm:py-8 flex flex-col items-center">
+        
+        <!-- Continuous Horizontal Metallic Rail Line -->
+        <div class="w-full relative flex items-center justify-center pointer-events-none mb-[-14px] z-20">
+          <!-- Left Mounting Bracket -->
+          <div class="hidden sm:block absolute left-4 lg:left-12 w-3.5 h-6 bg-gradient-to-r from-[#222] to-[#444] rounded-sm shadow-md"></div>
+          <!-- Metallic Dark Rail (2px height, #333) -->
+          <div class="w-full mx-2 sm:mx-8 lg:mx-16 h-[2.5px] bg-gradient-to-b from-[#4A4A4E] via-[#2A2A2E] to-[#141416] shadow-sm relative">
+            <div class="absolute inset-x-0 -top-[1px] h-[1px] bg-white/20"></div>
+          </div>
+          <!-- Right Mounting Bracket -->
+          <div class="hidden sm:block absolute right-4 lg:right-12 w-3.5 h-6 bg-gradient-to-l from-[#222] to-[#444] rounded-sm shadow-md"></div>
+        </div>
+
+        <!-- 3D Perspective Stage for Garments -->
+        <div id="rackStage" class="relative w-full max-w-5xl h-[390px] sm:h-[430px] flex items-center justify-center overflow-visible rack-perspective">
+          <!-- Dynamic Garment Cards will be rendered here by JS -->
+        </div>
+
+        <!-- Mode A Center Garment Info Bar & "ВЫБРАТЬ" Button -->
+        <div id="rackBrowsingControls" class="relative z-30 flex flex-col items-center mt-3 sm:mt-5 transition-all duration-300">
+          <!-- Title & Badges -->
+          <div class="flex items-center gap-2 mb-1.5">
+            <span id="rackActiveBadge" class="px-2.5 py-0.5 rounded-full bg-[#1C1C1E] text-white text-[10px] font-bold uppercase tracking-wider">
+              480 GSM
+            </span>
+            <span id="rackActiveColorDot" class="w-3 h-3 rounded-full border border-black/20 shadow-xs inline-block bg-[#EAE6DF]"></span>
+            <span id="rackActiveColorName" class="text-xs text-[#6E6E73] font-medium">Кремовый</span>
+          </div>
+
+          <h2 id="rackActiveTitle" class="font-display font-black text-xl sm:text-2xl text-[#141416] tracking-tight">
+            Худи Оверсайз Cream
+          </h2>
+
+          <div class="flex items-center gap-3 my-2.5">
+            <span id="rackActivePrice" class="font-display font-black text-lg sm:text-xl text-[#1C1C1E]">
+              от 1 890 ₽
+            </span>
+            <span class="text-xs text-[#8E8E93]">· тираж от 10 шт.</span>
+          </div>
+
+          <!-- Actions: Navigation arrows + "ВЫБРАТЬ" Button -->
+          <div class="flex items-center gap-3 mt-1">
+            <button 
+              type="button" 
+              onclick="navigateRack(-1)" 
+              class="w-10 h-10 rounded-full bg-white hover:bg-[#EAEAE5] border border-black/10 flex items-center justify-center text-[#1C1C1E] shadow-sm transition-transform active:scale-90"
+              aria-label="Предыдущая вещь"
+            >
+              <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            </button>
+
+            <button 
+              type="button" 
+              onclick="enterFocusedMode()" 
+              class="px-8 py-3.5 rounded-full bg-[#1C1C1E] hover:bg-[#2C2C30] text-white font-display font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 active:scale-95 flex items-center gap-2.5"
+            >
+              <svg class="w-3.5 h-3.5 text-[#DDBFB4]" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+              </svg>
+              <span>ВЫБРАТЬ</span>
+            </button>
+
+            <button 
+              type="button" 
+              onclick="navigateRack(1)" 
+              class="w-10 h-10 rounded-full bg-white hover:bg-[#EAEAE5] border border-black/10 flex items-center justify-center text-[#1C1C1E] shadow-sm transition-transform active:scale-90"
+              aria-label="Следующая вещь"
+            >
+              <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
+          </div>
+
+          <!-- Pagination Dots for the 6 items -->
+          <div id="rackDotsContainer" class="flex items-center gap-1.5 mt-3">
+            <!-- 6 dots rendered here -->
+          </div>
+        </div>
+
+        <!-- Mode B Focused Mode Action Bar (Initially Hidden) -->
+        <div id="rackFocusedActions" class="relative z-30 flex flex-col sm:flex-row items-center gap-3 mt-3 transition-all duration-300 opacity-0 pointer-events-none translate-y-3">
+          <button 
+            type="button" 
+            onclick="orderRackGarment()" 
+            class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#1C1C1E] hover:bg-[#2C2C30] text-white font-display font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-2"
+          >
+            <svg class="w-3.5 h-3.5 text-[#DDBFB4]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+            </svg>
+            <span>Заказать партию от 10 шт.</span>
+          </button>
+
+          <a 
+            href="#calculator" 
+            onclick="calcRackGarment()" 
+            class="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white hover:bg-[#FAF7F2] text-[#1C1C1E] border border-black/15 font-semibold text-xs uppercase tracking-wider transition-all hover:border-black/30 text-center"
+          >
+            Рассчитать в калькуляторе
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Bottom Stats Ribbon (Seamless Studio Transition into About section) -->
+      <div class="relative z-20 max-w-5xl mx-auto px-4 w-full pt-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-center">
+          <div class="p-3 sm:p-3.5 rounded-xl bg-white/70 border border-black/8 backdrop-blur-sm shadow-xs">
+            <div class="font-display font-bold text-lg sm:text-xl text-[#1C1C1E]">от 10 шт.</div>
+            <div class="text-[10px] text-[#6E6E73] uppercase tracking-wider mt-0.5">Минимальный тираж</div>
+          </div>
+          <div class="p-3 sm:p-3.5 rounded-xl bg-white/70 border border-black/8 backdrop-blur-sm shadow-xs">
+            <div class="font-display font-bold text-lg sm:text-xl text-[#1C1C1E]">100%</div>
+            <div class="text-[10px] text-[#6E6E73] uppercase tracking-wider mt-0.5">Кастомный дизайн</div>
+          </div>
+          <div class="p-3 sm:p-3.5 rounded-xl bg-white/70 border border-black/8 backdrop-blur-sm shadow-xs">
+            <div class="font-display font-bold text-lg sm:text-xl text-[#1C1C1E]">от 7 дней</div>
+            <div class="text-[10px] text-[#6E6E73] uppercase tracking-wider mt-0.5">Срок производства</div>
+          </div>
+          <div class="p-3 sm:p-3.5 rounded-xl bg-white/70 border border-black/8 backdrop-blur-sm shadow-xs">
+            <div class="font-display font-bold text-lg sm:text-xl text-[#1C1C1E]">35 моделей</div>
+            <div class="text-[10px] text-[#6E6E73] uppercase tracking-wider mt-0.5">Единый каталог</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 2. ПРОБЛЕМА И РЕШЕНИЕ -->
+    <section id="about" class="py-24 sm:py-32 relative bg-brand-dark/40 border-b border-white/5 scroll-mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+          <div class="inline-flex items-center gap-2 text-brand-rose text-xs uppercase tracking-[0.2em] font-semibold mb-3">
+            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+            </svg>
+            <span>Новый взгляд на мерч</span>
+          </div>
+          <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-tight">
+            Почему обычный мерч больше не работает
+          </h2>
+          <p class="text-brand-cream/70 mt-4 text-base sm:text-lg">
+            Мы изучили главные боли рынка сувенирной продукции и создали студию, которая решает их системно.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+          
+          <div class="relative rounded-3xl p-8 sm:p-10 bg-brand-surface/40 border border-red-500/20 backdrop-blur-sm overflow-hidden flex flex-col justify-between group hover:border-red-500/40 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-8">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-red-500/10 text-red-400 border border-red-500/20">
+                  Как бывает обычно
+                </span>
+                <i data-lucide="alert-triangle" class="w-6 h-6 text-red-400/80"></i>
+              </div>
+
+              <h3 class="font-display font-bold text-2xl text-white mb-6">Типовой мерч без души и контроля</h3>
+
+              <ul class="space-y-5 text-sm sm:text-base text-brand-cream/80">
+                <li class="flex items-start gap-3.5">
+                  <div class="w-5 h-5 rounded-full bg-red-500/10 text-red-400 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div>
+                    <strong class="text-white block font-medium">Низкое качество типового мерча</strong>
+                    Синтетические ткани, которые линяют после стирки, скатываются, а принты трескаются и осыпаются.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3.5">
+                  <div class="w-5 h-5 rounded-full bg-red-500/10 text-red-400 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div>
+                    <strong class="text-white block font-medium">Срыв сроков и испорченные мероприятия</strong>
+                    Задержки поставок прямо накануне конференции, выпуска или турнира без гарантий.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3.5">
+                  <div class="w-5 h-5 rounded-full bg-red-500/10 text-red-400 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div>
+                    <strong class="text-white block font-medium">Искажение цветов</strong>
+                    Печать без цветопроб, расхождение с брендбуком Pantone, мутные блеклые оттенки.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3.5">
+                  <div class="w-5 h-5 rounded-full bg-red-500/10 text-red-400 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div>
+                    <strong class="text-white block font-medium">Невостребованные тиражи</strong>
+                    Гигантские минимальные партии (от 100-300 шт.), которые годами пылятся на складах и выбрасываются.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-white/5 text-xs text-brand-muted">
+              Итог: слитый бюджет, разочарованные люди и обесценивание имени сообщества.
+            </div>
+          </div>
+
+          <div class="relative rounded-3xl p-8 sm:p-10 bg-gradient-to-br from-brand-surface to-[#1F1D22] border border-brand-rose/30 shadow-card flex flex-col justify-between group hover:border-brand-rose/60 transition-all">
+            <div>
+              <div class="flex items-center justify-between mb-8">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-brand-rose/20 text-brand-rose border border-brand-rose/30 flex items-center gap-1.5">
+                  <svg class="w-3 h-3 text-brand-rose" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+                  </svg>
+                  Решение «Знак Своих»
+                </span>
+                <div class="w-8 h-8 rounded-full bg-brand-rose/20 flex items-center justify-center text-brand-rose">
+                  <i data-lucide="check" class="w-5 h-5"></i>
+                </div>
+              </div>
+
+              <h3 class="font-display font-bold text-2xl text-white mb-6">Полный цикл от авторского дизайна до контроля фабричного пошива</h3>
+
+              <ul class="space-y-5 text-sm sm:text-base text-brand-cream">
+                <li class="flex items-start gap-3.5">
+                  <div class="w-5 h-5 rounded-full bg-brand-rose/20 text-brand-rose flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div>
+                    <strong class="text-brand-rose block font-medium">Авторский дизайн и айдентика</strong>
+                    Разрабатываем уникальную графику, леттеринг и смысловой мерч, отражающий культуру команды.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3.5">
+                  <div class="w-5 h-5 rounded-full bg-brand-rose/20 text-brand-rose flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div>
+                    <strong class="text-brand-rose block font-medium">Премиальные ткани пенье компакт</strong>
+                    Плотность от 240 до 460 г/м², тактильный софт-тач эффект, стойкие гипоаллергенные красители.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3.5">
+                  <div class="w-5 h-5 rounded-full bg-brand-rose/20 text-brand-rose flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div>
+                    <strong class="text-brand-rose block font-medium">Контроль фабричного пошива (ОТК)</strong>
+                    Проверка каждого стежка, прочности швов, ровности вышивки и финишной упаковки.
+                  </div>
+                </li>
+                <li class="flex items-start gap-3.5">
+                  <div class="w-5 h-5 rounded-full bg-brand-rose/20 text-brand-rose flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div>
+                    <strong class="text-brand-rose block font-medium">Малые партии от 10 единиц</strong>
+                    Оптимальный объем без рисков перепроизводства и с гарантией точной доставки к дедлайну.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-brand-rose/20 flex items-center justify-between">
+              <span class="text-xs text-brand-rose/80 font-medium">Одежда, которую носят с гордостью годами</span>
+              <a href="#catalog" class="text-xs uppercase tracking-wider text-brand-rose hover:text-white font-bold flex items-center gap-1 transition-colors">
+                Выбрать изделия <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. LOOKBOOK / КОЛЛЕКЦИЯ НА МОДЕЛЯХ -->
+    <section id="lookbook" class="py-24 sm:py-32 relative border-b border-white/5 scroll-mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-14">
+          <div>
+            <div class="inline-flex items-center gap-2 text-brand-rose text-xs uppercase tracking-[0.2em] font-semibold mb-3">
+              <svg class="w-3.5 h-3.5 text-brand-rose" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+              </svg>
+              <span>Lookbook 2026</span>
+            </div>
+            <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-tight">
+              ДНК Своих на моделях
+            </h2>
+          </div>
+          <p class="text-brand-cream/70 text-sm sm:text-base max-w-md mt-4 md:mt-0">
+            Единая коллекция в фирменной палитре: глубокий черный, мягкий крем, беж и пыльный кварц. Посадка оверсайз, которая подходит каждому.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          
+          <div class="lookbook-card group cursor-pointer" onclick="handleCardClick('u-hoodie-architect-m', this)">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#C7C7C7]">
+              <img 
+                src="images/catalog/hoodie-architect-m.jpg" 
+                alt="Худи Чистый Крой Архитект на моделях" 
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+              >
+              <div class="brand-embroidery-stamp top-3 left-3">
+                <svg class="w-3 h-3 text-brand-rose" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/></svg>
+                <span>Знак Своих · Дроп 01</span>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-transparent to-transparent opacity-85 group-hover:opacity-70 transition-opacity"></div>
+              <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+                <div>
+                  <span class="text-[10px] text-brand-rose uppercase tracking-widest font-semibold block">LOOK 01</span>
+                  <h4 class="font-display font-bold text-base text-white">Худи «Архитект» 420г</h4>
+                  <p class="text-xs text-brand-cream/70">Графит, Беж, Олива</p>
+                </div>
+                <div class="p-2 rounded-full bg-brand-rose text-brand-black">
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lookbook-card group cursor-pointer" onclick="handleCardClick('u-longsleeve-indigo', this)">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#C7C7C7]">
+              <img 
+                src="images/catalog/longsleeve-indigo.jpg" 
+                alt="Лонгслив Плотный Индиго на моделях" 
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+              >
+              <div class="brand-embroidery-stamp top-3 left-3">
+                <svg class="w-3 h-3 text-brand-rose" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/></svg>
+                <span>Знак Своих · Капсула</span>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-transparent to-transparent opacity-85 group-hover:opacity-70 transition-opacity"></div>
+              <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+                <div>
+                  <span class="text-[10px] text-brand-rose uppercase tracking-widest font-semibold block">LOOK 02</span>
+                  <h4 class="font-display font-bold text-base text-white">Лонгслив «Индиго» 280г</h4>
+                  <p class="text-xs text-brand-cream/70">Индиго, Голубой, Графит</p>
+                </div>
+                <div class="p-2 rounded-full bg-brand-rose text-brand-black">
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lookbook-card group cursor-pointer" onclick="handleCardClick('m-jacket-workwear-camel', this)">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#C7C7C7]">
+              <img 
+                src="images/catalog/jacket-workwear-twill.jpg" 
+                alt="Куртка-Рубашка Workwear Твил на моделях" 
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+              >
+              <div class="brand-embroidery-stamp top-3 left-3">
+                <svg class="w-3 h-3 text-brand-rose" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/></svg>
+                <span>Знак Своих · Streetwear</span>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-transparent to-transparent opacity-85 group-hover:opacity-70 transition-opacity"></div>
+              <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+                <div>
+                  <span class="text-[10px] text-brand-rose uppercase tracking-widest font-semibold block">LOOK 03</span>
+                  <h4 class="font-display font-bold text-base text-white">Овершот Твил Workwear</h4>
+                  <p class="text-xs text-brand-cream/70">Camel, Твил 360 г/м²</p>
+                </div>
+                <div class="p-2 rounded-full bg-brand-rose text-brand-black">
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lookbook-card group cursor-pointer" onclick="handleCardClick('w-tee-heavyweight-rose', this)">
+            <div class="relative aspect-[4/3] overflow-hidden bg-[#C7C7C7]">
+              <img 
+                src="images/catalog/tee-boxy-w.jpg" 
+                alt="Футболка Оверсайз Boxy Raw на моделях" 
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+              >
+              <div class="brand-embroidery-stamp top-3 left-3">
+                <svg class="w-3 h-3 text-brand-rose" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/></svg>
+                <span>Знак Своих · Summer Drop</span>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-transparent to-transparent opacity-85 group-hover:opacity-70 transition-opacity"></div>
+              <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+                <div>
+                  <span class="text-[10px] text-brand-rose uppercase tracking-widest font-semibold block">LOOK 04</span>
+                  <h4 class="font-display font-bold text-base text-white">Футболка Boxy 280г</h4>
+                  <p class="text-xs text-brand-cream/70">Терракота, Черный, Белый</p>
+                </div>
+                <div class="p-2 rounded-full bg-brand-rose text-brand-black">
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. КАТАЛОГ С ПЕРЕКЛЮЧАТЕЛЕМ МУЖСКОЕ / ЖЕНСКОЕ -->
+    <section id="catalog" class="py-24 sm:py-32 relative border-b border-white/5 scroll-mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="inline-flex items-center gap-2 text-brand-rose text-xs uppercase tracking-[0.2em] font-semibold mb-3">
+            <svg class="w-3.5 h-3.5 text-brand-rose" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+            </svg>
+            <span>Полный гардероб студии</span>
+          </div>
+          <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-tight">
+            Каталог продукции
+          </h2>
+          <p class="text-brand-cream/70 mt-3 text-sm sm:text-base">
+            Единый каталог для всех. Выберите категорию и кликните на любую карточку — она плавно раскроется в детальное модальное окно.
+          </p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mb-12 pb-2">
+          <button class="category-tab active px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all bg-brand-rose text-brand-black active:scale-95" data-category="all">
+            Все модели
+          </button>
+          <button class="category-tab px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all bg-white/5 text-brand-cream/80 hover:bg-white/10 active:scale-95" data-category="hoodies">
+            Худи и свитшоты
+          </button>
+          <button class="category-tab px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all bg-white/5 text-brand-cream/80 hover:bg-white/10 active:scale-95" data-category="tshirts">
+            Футболки
+          </button>
+          <button class="category-tab px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all bg-white/5 text-brand-cream/80 hover:bg-white/10 active:scale-95" data-category="shirts">
+            Рубашки
+          </button>
+          <button class="category-tab px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all bg-white/5 text-brand-cream/80 hover:bg-white/10 active:scale-95" data-category="stationery">
+            Канцелярия
+          </button>
+          <button class="category-tab px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all bg-white/5 text-brand-cream/80 hover:bg-white/10 active:scale-95" data-category="accessories">
+            Аксессуары
+          </button>
+        </div>
+
+        <!-- Dynamic Product Grid (Mobile 1 Col, Tablet 2 Col, Desktop 3 Col) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="productsGrid">
+          <!-- Injected dynamically via renderCatalog() in app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. УТП (01, 02, 03, 04) -->
+    <section id="usp" class="py-24 sm:py-32 relative bg-brand-surface/30 border-b border-white/5 scroll-mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+          <div class="inline-flex items-center gap-2 text-brand-rose text-xs uppercase tracking-[0.2em] font-semibold mb-3">
+            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+            </svg>
+            <span>Наши преимущества</span>
+          </div>
+          <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-tight">
+            Четыре принципа «Знака Своих»
+          </h2>
+          <p class="text-brand-cream/70 mt-4 text-base sm:text-lg">
+            Фундамент, на котором мы строим каждый проект мерча — от студенческого клуба до ИТ-холдинга.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          
+          <div class="group relative rounded-3xl p-8 bg-brand-dark/90 border border-white/5 hover:border-brand-rose/50 transition-all duration-300 hover:-translate-y-1.5 shadow-card flex flex-col justify-between">
+            <div>
+              <div class="font-display font-black text-6xl lg:text-7xl text-brand-rose/20 group-hover:text-brand-rose/40 transition-colors mb-6 tracking-tighter">01</div>
+              <h3 class="font-display font-bold text-xl text-white mb-3 group-hover:text-brand-rose transition-colors">Полный цикл</h3>
+              <p class="text-sm text-brand-cream/80 leading-relaxed">
+                От первой идеи, авторской иллюстрации и сайта предзаказа до подбора фабричных лекал, пошива и логистики. Вы не ищете 5 разных подрядчиков.
+              </p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-white/5 flex items-center gap-2 text-xs text-brand-rose font-medium">
+              <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+              <span>Единое окно ответственности</span>
+            </div>
+          </div>
+
+          <div class="group relative rounded-3xl p-8 bg-brand-dark/90 border border-white/5 hover:border-brand-rose/50 transition-all duration-300 hover:-translate-y-1.5 shadow-card flex flex-col justify-between">
+            <div>
+              <div class="font-display font-black text-6xl lg:text-7xl text-brand-rose/20 group-hover:text-brand-rose/40 transition-colors mb-6 tracking-tighter">02</div>
+              <h3 class="font-display font-bold text-xl text-white mb-3 group-hover:text-brand-rose transition-colors">Кастомный дизайн</h3>
+              <p class="text-sm text-brand-cream/80 leading-relaxed">
+                Никаких шаблонных картинок из бесплатных фотостоков. Создаем глубокую айдентику, которая передает ценности вашего сообщества и вызывает зависть.
+              </p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-white/5 flex items-center gap-2 text-xs text-brand-rose font-medium">
+              <i data-lucide="palette" class="w-3.5 h-3.5"></i>
+              <span>100% уникальная графика</span>
+            </div>
+          </div>
+
+          <div class="group relative rounded-3xl p-8 bg-brand-dark/90 border border-white/5 hover:border-brand-rose/50 transition-all duration-300 hover:-translate-y-1.5 shadow-card flex flex-col justify-between">
+            <div>
+              <div class="font-display font-black text-6xl lg:text-7xl text-brand-rose/20 group-hover:text-brand-rose/40 transition-colors mb-6 tracking-tighter">03</div>
+              <h3 class="font-display font-bold text-xl text-white mb-3 group-hover:text-brand-rose transition-colors">Малые тиражи</h3>
+              <p class="text-sm text-brand-cream/80 leading-relaxed">
+                Премиальные ткани и фабричное качество доступны от 10 штук. Вы тестируете спрос без заморозки сотен тысяч рублей в непроданных остатках.
+              </p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-white/5 flex items-center gap-2 text-xs text-brand-rose font-medium">
+              <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+              <span>Старт без риска от 10 единиц</span>
+            </div>
+          </div>
+
+          <div class="group relative rounded-3xl p-8 bg-brand-dark/90 border border-white/5 hover:border-brand-rose/50 transition-all duration-300 hover:-translate-y-1.5 shadow-card flex flex-col justify-between">
+            <div>
+              <div class="font-display font-black text-6xl lg:text-7xl text-brand-rose/20 group-hover:text-brand-rose/40 transition-colors mb-6 tracking-tighter">04</div>
+              <h3 class="font-display font-bold text-xl text-white mb-3 group-hover:text-brand-rose transition-colors">Под ключ</h3>
+              <p class="text-sm text-brand-cream/80 leading-relaxed">
+                Трехуровневый контроль качества ОТК, индивидуальная маркировка, бирки, брендовая крафт-упаковка и доставка до дверей точно к назначенной дате.
+              </p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-white/5 flex items-center gap-2 text-xs text-brand-rose font-medium">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+              <span>Гарантия точных сроков</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. ЦЕЛЕВАЯ АУДИТОРИЯ (4 КАРТОЧКИ) -->
+    <section id="audience" class="py-24 sm:py-32 relative border-b border-white/5 scroll-mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+          <div>
+            <div class="inline-flex items-center gap-2 text-brand-rose text-xs uppercase tracking-[0.2em] font-semibold mb-3">
+              <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+              </svg>
+              <span>Для кого мы создаем мерч</span>
+            </div>
+            <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-tight">
+              Целевая аудитория
+            </h2>
+          </div>
+          <p class="text-brand-cream/70 text-sm sm:text-base max-w-md mt-4 md:mt-0">
+            Мы понимаем специфику каждого сегмента: от трогательных выпускных альбомов в ткани до строгого corporate identity.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          
+          <div class="audience-card group relative rounded-3xl bg-brand-dark/80 border border-white/10 p-8 overflow-hidden hover:border-brand-rose/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-rose/20">
+            <div class="w-12 h-12 rounded-2xl bg-brand-rose/15 text-brand-rose flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-rose group-hover:text-brand-black transition-all duration-300">
+              <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-2 group-hover:text-brand-rose transition-colors">
+              Школьные сообщества
+            </h3>
+            <div class="text-xs font-semibold text-brand-rose mb-4 uppercase tracking-wider">
+              Памятные худи и мерч классов
+            </div>
+            <p class="text-sm text-brand-cream/75 leading-relaxed mb-6">
+              Выпускные капсулы, мерч лицеев и студенческих объединений. Вещи, которые бережно хранят память о дружбе и юности.
+            </p>
+            <ul class="space-y-2 text-xs text-brand-cream/60 pt-4 border-t border-white/5">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-rose"></i>Сбор размеров через онлайн-форму</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-rose"></i>Именная вышивка на манжетах</li>
+            </ul>
+          </div>
+
+          <div class="audience-card group relative rounded-3xl bg-brand-dark/80 border border-white/10 p-8 overflow-hidden hover:border-brand-rose/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-rose/20">
+            <div class="w-12 h-12 rounded-2xl bg-brand-rose/15 text-brand-rose flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-rose group-hover:text-brand-black transition-all duration-300">
+              <i data-lucide="trophy" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-2 group-hover:text-brand-rose transition-colors">
+              Спортивные секции
+            </h3>
+            <div class="text-xs font-semibold text-brand-rose mb-4 uppercase tracking-wider">
+              Командная экипировка
+            </div>
+            <p class="text-sm text-brand-cream/75 leading-relaxed mb-6">
+              Клубная форма, ветровки, спортивные рюкзаки и тренировочные костюмы. Дышащие материалы и стойкость к стиркам.
+            </p>
+            <ul class="space-y-2 text-xs text-brand-cream/60 pt-4 border-t border-white/5">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-rose"></i>Устойчивость к частым стиркам</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-rose"></i>Номера и клубные шевроны</li>
+            </ul>
+          </div>
+
+          <div class="audience-card group relative rounded-3xl bg-brand-dark/80 border border-white/10 p-8 overflow-hidden hover:border-brand-rose/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-rose/20">
+            <div class="w-12 h-12 rounded-2xl bg-brand-rose/15 text-brand-rose flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-rose group-hover:text-brand-black transition-all duration-300">
+              <i data-lucide="briefcase" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-2 group-hover:text-brand-rose transition-colors">
+              Корпорации & Стартапы
+            </h3>
+            <div class="text-xs font-semibold text-brand-rose mb-4 uppercase tracking-wider">
+              Брендинг и HR-культура
+            </div>
+            <p class="text-sm text-brand-cream/75 leading-relaxed mb-6">
+              Мерч для онбординга новых сотрудников, конференций, митапов и подарков партнерам. Повышает статус и loyalty.
+            </p>
+            <ul class="space-y-2 text-xs text-brand-cream/60 pt-4 border-t border-white/5">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-rose"></i>Точное соответствие Pantone</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-rose"></i>Безналичный расчет с НДС/без НДС</li>
+            </ul>
+          </div>
+
+          <div class="audience-card group relative rounded-3xl bg-brand-dark/80 border border-white/10 p-8 overflow-hidden hover:border-brand-rose/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-rose/20">
+            <div class="w-12 h-12 rounded-2xl bg-brand-rose/15 text-brand-rose flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-rose group-hover:text-brand-black transition-all duration-300">
+              <i data-lucide="sparkles" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-2 group-hover:text-brand-rose transition-colors">
+              Начинающие бренды
+            </h3>
+            <div class="text-xs font-semibold text-brand-rose mb-4 uppercase tracking-wider">
+              Капсулы и лимитированные дропы
+            </div>
+            <p class="text-sm text-brand-cream/75 leading-relaxed mb-6">
+              Креаторы, инфлюенсеры и молодые дизайнеры. Помогаем отшить первую коллекцию одежды под собственным лейблом.
+            </p>
+            <ul class="space-y-2 text-xs text-brand-cream/60 pt-4 border-t border-white/5">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-rose"></i>Вшивные жаккардовые бирки</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-rose"></i>Помощь в создании лукбука</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. АНАЛИЗ КОНКУРЕНТОВ -->
+    <section id="competitors" class="py-24 sm:py-32 relative bg-brand-surface/20 border-b border-white/5 scroll-mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mx-auto text-center mb-16">
+          <div class="inline-flex items-center gap-2 text-brand-rose text-xs uppercase tracking-[0.2em] font-semibold mb-3">
+            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+            </svg>
+            <span>Рыночный анализ</span>
+          </div>
+          <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-tight">
+            Сравнение с конкурентами
+          </h2>
+          <!-- Exact text required by prompt -->
+          <div class="mt-6 p-6 rounded-2xl bg-brand-dark/90 border border-brand-rose/30 shadow-card text-brand-cream text-base sm:text-lg leading-relaxed">
+            «Мы проанализировали <span class="text-white font-semibold">KUNJUT</span>, <span class="text-white font-semibold">VSEMAYKI</span>, <span class="text-white font-semibold">Фабрику Мерча</span>, <span class="text-white font-semibold">ЭДМОС</span> и <span class="text-white font-semibold">COMERCH</span>. Наш баланс — кастомный дизайн, малые тиражи и полный контроль качества».
+          </div>
+        </div>
+
+        <div class="overflow-x-auto rounded-3xl border border-white/10 bg-brand-dark/80 backdrop-blur-sm shadow-2xl">
+          <table class="w-full text-left text-sm">
+            <thead class="bg-brand-surface/80 border-b border-white/10 text-xs uppercase tracking-wider font-display">
+              <tr>
+                <th class="p-5 sm:p-6 text-brand-cream/70">Критерий</th>
+                <th class="p-5 sm:p-6 text-brand-rose font-bold bg-brand-rose/10 border-x border-brand-rose/20 text-center">
+                  <div class="flex items-center justify-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-brand-rose" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/></svg>
+                    Знак Своих
+                  </div>
+                </th>
+                <th class="p-5 sm:p-6 text-brand-cream/60">Масс-маркет (VSEMAYKI)</th>
+                <th class="p-5 sm:p-6 text-brand-cream/60">Крупные B2B (KUNJUT, ЭДМОС, Фабрика Мерча)</th>
+                <th class="p-5 sm:p-6 text-brand-cream/60">Агентства (COMERCH)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-5 sm:p-6 font-medium text-white">Минимальный тираж</td>
+                <td class="p-5 sm:p-6 text-center font-bold text-brand-rose bg-brand-rose/5 border-x border-brand-rose/20">от 10 штук</td>
+                <td class="p-5 sm:p-6 text-brand-cream/70">от 1 шт. (конвейер)</td>
+                <td class="p-5 sm:p-6 text-brand-cream/70">от 50–100 шт. (высокий порог)</td>
+                <td class="p-5 sm:p-6 text-brand-cream/70">от 50 шт.</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-5 sm:p-6 font-medium text-white">Авторский дизайн</td>
+                <td class="p-5 sm:p-6 text-center font-bold text-brand-rose bg-brand-rose/5 border-x border-brand-rose/20">Индивидуально под ДНК</td>
+                <td class="p-5 sm:p-6 text-brand-cream/70">Шаблонный конструктор</td>
+                <td class="p-5 sm:p-6 text-brand-cream/70">Типовое нанесение лого</td>
+                <td class="p-5 sm:p-6 text-brand-cream/70">Дорогая дизайн-концепция</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-5 sm:p-6 font-medium text-white">Качество материалов</td>
+                <td class="p-5 sm:p-6 text-center font-bold text-brand-rose bg-brand-rose/5 border-x border-brand-rose/20">Пенье компакт 240–460 г</td>
+                <td class="p-5 sm:p-6 text-brand-cream/70">Эконом/синтетика 140–160 г</td>
+                <td class="p-5 sm:p-6 text-brand-cream/70">Стандартные промо-бланки</td>
+                <td class="p-5 sm:p-6 text-brand-cream/70">Хорошее, но переплата за бренд</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-5 sm:p-6 font-medium text-white">Сроки пошива</td>
+                <td class="p-5 sm:p-6 text-center font-bold text-brand-rose bg-brand-rose/5 border-x border-brand-rose/20">от 7 до 14 рабочих дней</td>
+                <td class="p-5 sm:p-6 text-brand-cream/70">3–5 дней (быстрая печать)</td>
+                <td class="p-5 sm:p-6 text-brand-cream/70">18–30 дней (очереди на фабриках)</td>
+                <td class="p-5 sm:p-6 text-brand-cream/70">14–25 дней</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-5 sm:p-6 font-medium text-white">Контроль каждого изделия</td>
+                <td class="p-5 sm:p-6 text-center font-bold text-brand-rose bg-brand-rose/5 border-x border-brand-rose/20">100% личный ОТК</td>
+                <td class="p-5 sm:p-6 text-brand-cream/70">Выборочный / автоматический</td>
+                <td class="p-5 sm:p-6 text-brand-cream/70">Выборочный на потоке</td>
+                <td class="p-5 sm:p-6 text-brand-cream/70">Менеджерский контроль</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. СЛЕДУЮЩИЕ ШАГИ (ROADMAP) -->
+    <section id="roadmap" class="py-24 sm:py-32 relative border-b border-white/5 scroll-mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+          <div class="inline-flex items-center gap-2 text-brand-rose text-xs uppercase tracking-[0.2em] font-semibold mb-3">
+            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+            </svg>
+            <span>План развития проекта</span>
+          </div>
+          <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-tight">
+            Следующие шаги (Roadmap)
+          </h2>
+          <p class="text-brand-cream/70 mt-4 text-base sm:text-lg">
+            Поэтапная стратегия масштабирования студии: от запуска пилотного предзаказа до автоматизации B2B-направления.
+          </p>
+        </div>
+
+        <div class="relative">
+          <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-brand-rose/20 via-brand-rose to-brand-rose/20 -translate-y-1/2 z-0"></div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 relative z-10">
+            
+            <div class="roadmap-step relative rounded-3xl p-6 sm:p-7 bg-brand-dark/95 border border-brand-rose/40 shadow-card flex flex-col justify-between">
+              <div class="flex items-center justify-between mb-4">
+                <span class="w-8 h-8 rounded-full bg-brand-rose text-brand-black font-display font-bold text-sm flex items-center justify-center">1</span>
+                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-brand-rose/20 text-brand-rose border border-brand-rose/30 uppercase tracking-wider">Текущий этап</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-white mb-2">Запуск пилота</h3>
+              <p class="text-xs text-brand-rose font-medium mb-3">100% предзаказная модель</p>
+              <p class="text-sm text-brand-cream/80 leading-relaxed mb-4">
+                Сбор первых заявок от школьных и университетских сообществ, тестирование посадочной страницы и финальная доводка лекал оверсайз-худи.
+              </p>
+              <div class="text-[11px] text-brand-muted pt-3 border-t border-white/5 flex items-center gap-1.5">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-brand-rose"></i>
+                Безопасный старт без кассового разрыва
+              </div>
+            </div>
+
+            <div class="roadmap-step relative rounded-3xl p-6 sm:p-7 bg-brand-dark/90 border border-white/10 hover:border-brand-rose/40 shadow-card flex flex-col justify-between transition-colors">
+              <div class="flex items-center justify-between mb-4">
+                <span class="w-8 h-8 rounded-full bg-white/10 text-brand-cream font-display font-bold text-sm flex items-center justify-center">2</span>
+                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-white/5 text-brand-muted uppercase tracking-wider">Этап 2</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-white mb-2">Финансы & Материалы</h3>
+              <p class="text-xs text-brand-rose font-medium mb-3">Оптимизация себестоимости</p>
+              <p class="text-sm text-brand-cream/80 leading-relaxed mb-4">
+                Прямые оптовые закупки турецкого футера пенье, разработка фирменной крафтовой эко-упаковки и расчет гибких цен для постоянных партнеров.
+              </p>
+              <div class="text-[11px] text-brand-muted pt-3 border-t border-white/5 flex items-center gap-1.5">
+                <i data-lucide="trending-up" class="w-3.5 h-3.5 text-brand-rose"></i>
+                Снижение себестоимости на 18%
+              </div>
+            </div>
+
+            <div class="roadmap-step relative rounded-3xl p-6 sm:p-7 bg-brand-dark/90 border border-white/10 hover:border-brand-rose/40 shadow-card flex flex-col justify-between transition-colors">
+              <div class="flex items-center justify-between mb-4">
+                <span class="w-8 h-8 rounded-full bg-white/10 text-brand-cream font-display font-bold text-sm flex items-center justify-center">3</span>
+                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-white/5 text-brand-muted uppercase tracking-wider">Этап 3</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-white mb-2">Сотрудничество</h3>
+              <p class="text-xs text-brand-rose font-medium mb-3">Пул проверенных фабрик</p>
+              <p class="text-sm text-brand-cream/80 leading-relaxed mb-4">
+                Заключение партнерских контрактов с локальными швейными цехами и печатными производствами (шелкография, DTF, вышивка) с SLA по срокам.
+              </p>
+              <div class="text-[11px] text-brand-muted pt-3 border-t border-white/5 flex items-center gap-1.5">
+                <i data-lucide="handshake" class="w-3.5 h-3.5 text-brand-rose"></i>
+                Гарантированная мощность до 1 000 шт/мес
+              </div>
+            </div>
+
+            <div class="roadmap-step relative rounded-3xl p-6 sm:p-7 bg-brand-dark/90 border border-white/10 hover:border-brand-rose/40 shadow-card flex flex-col justify-between transition-colors">
+              <div class="flex items-center justify-between mb-4">
+                <span class="w-8 h-8 rounded-full bg-white/10 text-brand-cream font-display font-bold text-sm flex items-center justify-center">4</span>
+                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-white/5 text-brand-muted uppercase tracking-wider">Этап 4</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-white mb-2">Наставничество</h3>
+              <p class="text-xs text-brand-rose font-medium mb-3">Автоматизация B2B</p>
+              <p class="text-sm text-brand-cream/80 leading-relaxed mb-4">
+                Внедрение CRM, конструктора онлайн-мерча для корпоративных клиентов, масштабирование команды и наставничество молодых дизайнеров.
+              </p>
+              <div class="text-[11px] text-brand-muted pt-3 border-t border-white/5 flex items-center gap-1.5">
+                <i data-lucide="cpu" class="w-3.5 h-3.5 text-brand-rose"></i>
+                Выход на федеральный уровень
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 9. ИНТЕРАКТИВНЫЙ КАЛЬКУЛЯТОР МЕРЧА -->
+    <section id="calculator" class="py-24 sm:py-32 relative bg-brand-surface/30 border-b border-white/5 scroll-mt-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <div class="inline-flex items-center gap-2 text-brand-rose text-xs uppercase tracking-[0.2em] font-semibold mb-3">
+            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+            </svg>
+            <span>Онлайн-расчет</span>
+          </div>
+          <h2 class="font-display font-black text-3xl sm:text-4xl text-white uppercase tracking-tight">
+            Калькулятор тиража
+          </h2>
+          <p class="text-brand-cream/70 text-sm sm:text-base mt-2">
+            Выберите тип изделия, размер партии и брендирование, чтобы моментально узнать ориентировочную стоимость.
+          </p>
+        </div>
+
+        <div class="rounded-3xl p-6 sm:p-10 bg-brand-dark/95 border border-brand-rose/25 shadow-card backdrop-blur-xl">
+          <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+            
+            <div class="space-y-6">
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-semibold text-brand-cream/80 mb-2">1. Тип изделия</label>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2" id="calcItemTypes">
+                  <button type="button" class="calc-btn active p-3 rounded-xl border text-left text-xs font-medium transition-all" data-base="1890" data-price="1890" data-name="Худи оверсайз" data-item="Худи оверсайз">
+                    <span class="block font-bold text-white">Худи</span>
+                    <span class="text-[10px] text-brand-muted">Футер 460г</span>
+                  </button>
+                  <button type="button" class="calc-btn p-3 rounded-xl border text-left text-xs font-medium transition-all" data-base="990" data-price="990" data-name="Футболка Boxy" data-item="Футболка Boxy">
+                    <span class="block font-bold text-white">Футболка</span>
+                    <span class="text-[10px] text-brand-muted">Хлопок 260г</span>
+                  </button>
+                  <button type="button" class="calc-btn p-3 rounded-xl border text-left text-xs font-medium transition-all" data-base="2450" data-price="2450" data-name="Овершот Твил" data-item="Овершот Твил">
+                    <span class="block font-bold text-white">Рубашка</span>
+                    <span class="text-[10px] text-brand-muted">Овершот 340г</span>
+                  </button>
+                  <button type="button" class="calc-btn p-3 rounded-xl border text-left text-xs font-medium transition-all" data-base="1690" data-price="1690" data-name="Свитшот базовый" data-item="Свитшот базовый">
+                    <span class="block font-bold text-white">Свитшот</span>
+                    <span class="text-[10px] text-brand-muted">Футер 380г</span>
+                  </button>
+                  <button type="button" class="calc-btn p-3 rounded-xl border text-left text-xs font-medium transition-all" data-base="490" data-price="490" data-name="Шоппер канвас" data-item="Шоппер канвас">
+                    <span class="block font-bold text-white">Шоппер</span>
+                    <span class="text-[10px] text-brand-muted">Канвас 380г</span>
+                  </button>
+                  <button type="button" class="calc-btn p-3 rounded-xl border text-left text-xs font-medium transition-all" data-base="790" data-price="790" data-name="Кепка с вышивкой" data-item="Кепка с вышивкой">
+                    <span class="block font-bold text-white">Кепка</span>
+                    <span class="text-[10px] text-brand-muted">3D вышивка</span>
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <label class="text-xs uppercase tracking-wider font-semibold text-brand-cream/80">2. Размер тиража</label>
+                  <span class="font-display font-bold text-brand-rose text-base" id="calcQtyDisplay">25 шт.</span>
+                </div>
+                <input type="range" id="calcQtyRange" min="10" max="200" step="5" value="25" class="w-full accent-brand-rose cursor-pointer h-2 bg-white/10 rounded-lg">
+                <div class="flex justify-between text-[10px] text-brand-muted mt-1">
+                  <span>10 шт. (мин)</span>
+                  <span>50 шт.</span>
+                  <span>100 шт.</span>
+                  <span>200+ шт.</span>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-wider font-semibold text-brand-cream/80 mb-2">3. Способ нанесения</label>
+                <div class="grid grid-cols-3 gap-2" id="calcPrintTypes">
+                  <button type="button" class="calc-print-btn active p-2.5 rounded-xl border text-center text-xs font-medium transition-all" data-add="350" data-print="Премиум вышивка">
+                    <span class="block font-bold text-white">Вышивка</span>
+                    <span class="text-[10px] text-brand-muted">+350 ₽</span>
+                  </button>
+                  <button type="button" class="calc-print-btn p-2.5 rounded-xl border text-center text-xs font-medium transition-all" data-add="220" data-print="Шелкография">
+                    <span class="block font-bold text-white">Шелкография</span>
+                    <span class="text-[10px] text-brand-muted">+220 ₽</span>
+                  </button>
+                  <button type="button" class="calc-print-btn p-2.5 rounded-xl border text-center text-xs font-medium transition-all" data-add="190" data-print="DTF-печать">
+                    <span class="block font-bold text-white">DTF-печать</span>
+                    <span class="text-[10px] text-brand-muted">+190 ₽</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-2xl p-6 sm:p-8 bg-brand-surface/60 border border-brand-rose/30 flex flex-col justify-between">
+              <div>
+                <div class="text-xs uppercase tracking-wider text-brand-rose font-semibold mb-1">Предварительный расчет</div>
+                <div class="font-display font-bold text-2xl text-white mb-4" id="calcSummaryItem">Худи оверсайз</div>
+
+                <div class="space-y-3 text-xs text-brand-cream/80 mb-6 pb-6 border-b border-white/10">
+                  <div class="flex justify-between"><span>Тираж:</span><span class="text-white font-medium" id="calcSummaryQty">25 шт.</span></div>
+                  <div class="flex justify-between"><span>Нанесение:</span><span class="text-white font-medium" id="calcSummaryPrint">Премиум вышивка</span></div>
+                  <div class="flex justify-between"><span>Срок изготовления:</span><span class="text-brand-rose font-medium" id="calcSummaryLead">7–10 рабочих дней</span></div>
+                  <div class="flex justify-between"><span>Дизайн-макет & 3D:</span><span class="text-brand-rose font-medium">Включен бесплатно</span></div>
+                </div>
+
+                <div class="mb-6">
+                  <span class="text-xs text-brand-muted block">Цена за единицу (со скидкой за объем):</span>
+                  <div class="font-display font-black text-3xl sm:text-4xl text-white">
+                    <span id="calcPerItemPrice">2 140</span> <span class="text-brand-rose text-2xl">₽</span>
+                  </div>
+                  <div class="text-xs text-brand-cream/60 mt-1">
+                    Общая стоимость партии: <span class="font-bold text-white" id="calcTotalPrice">53 500 ₽</span>
+                  </div>
+                </div>
+              </div>
+
+              <button onclick="orderFromCalculator()" class="w-full py-4 rounded-full bg-brand-rose text-brand-black font-display font-bold text-xs uppercase tracking-wider hover:bg-brand-rose-hover transition-all duration-300 hover:shadow-glow-rose active:scale-95 flex items-center justify-center gap-2">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+                </svg>
+                Зафиксировать эту стоимость
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 10. CONTACTS & DIRECT INLINE FORM -->
+    <section id="contacts" class="py-24 sm:py-32 relative border-b border-white/5 scroll-mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          <div>
+            <div class="inline-flex items-center gap-2 text-brand-rose text-xs uppercase tracking-[0.2em] font-semibold mb-3">
+              <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+              </svg>
+              <span>Свяжитесь с нами</span>
+            </div>
+            <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-tight mb-6">
+              Готовы создать мерч для своих?
+            </h2>
+            <p class="text-brand-cream/80 text-base sm:text-lg mb-8 leading-relaxed">
+              Напишите нам о вашей идее или оставьте заявку. Мы бесплатно подготовим визуальный мудборд концепта и рассчитаем смету в течение 24 часов.
+            </p>
+
+            <div class="space-y-4 mb-10">
+              <a href="mailto:hello@znaksvoih.ru" class="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-brand-rose/40 transition-colors group">
+                <div class="w-10 h-10 rounded-xl bg-brand-rose/10 text-brand-rose flex items-center justify-center group-hover:bg-brand-rose group-hover:text-brand-black transition-colors">
+                  <i data-lucide="mail" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-brand-muted block uppercase tracking-wider">Email студии</span>
+                  <span class="text-white font-medium group-hover:text-brand-rose transition-colors">hello@znaksvoih.ru</span>
+                </div>
+              </a>
+
+              <a href="https://t.me/znaksvoih" target="_blank" rel="noopener" class="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-brand-rose/40 transition-colors group">
+                <div class="w-10 h-10 rounded-xl bg-brand-rose/10 text-brand-rose flex items-center justify-center group-hover:bg-brand-rose group-hover:text-brand-black transition-colors">
+                  <i data-lucide="send" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-brand-muted block uppercase tracking-wider">Telegram-канал и бот</span>
+                  <span class="text-white font-medium group-hover:text-brand-rose transition-colors">@znaksvoih_studio</span>
+                </div>
+              </a>
+
+              <div class="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/5">
+                <div class="w-10 h-10 rounded-xl bg-brand-rose/10 text-brand-rose flex items-center justify-center">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-brand-muted block uppercase tracking-wider">Локация</span>
+                  <span class="text-white font-medium">Россия, Москва / Санкт-Петербург / Доставка по РФ</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <span class="text-xs text-brand-muted">Мы в соцсетях:</span>
+              <a href="#" class="w-9 h-9 rounded-full bg-white/5 hover:bg-brand-rose hover:text-brand-black flex items-center justify-center transition-colors text-brand-cream/80" aria-label="VK"><span class="font-bold text-xs">VK</span></a>
+              <a href="#" class="w-9 h-9 rounded-full bg-white/5 hover:bg-brand-rose hover:text-brand-black flex items-center justify-center transition-colors text-brand-cream/80" aria-label="Telegram"><i data-lucide="send" class="w-4 h-4"></i></a>
+            </div>
+          </div>
+
+          <!-- Inline Form -->
+          <div class="rounded-3xl p-8 sm:p-10 bg-brand-dark/95 border border-brand-rose/30 shadow-card">
+            <h3 class="font-display font-bold text-2xl text-white mb-2">Обсудить проект</h3>
+            <p class="text-xs text-brand-cream/70 mb-6">Заполните поля ниже, и дизайнер свяжется с вами сегодня же</p>
+
+            <form id="inlineLeadForm" onsubmit="handleFormSubmit(event, 'Инлайн форма контактов')" class="space-y-4">
+              <div>
+                <label class="block text-xs uppercase tracking-wider text-brand-muted mb-1.5 font-medium">Ваше имя *</label>
+                <input type="text" name="name" required placeholder="Константин или Название сообщества" class="w-full px-4 py-3 rounded-xl bg-brand-surface border border-white/10 text-white placeholder-brand-muted/60 focus:border-brand-rose focus:ring-1 focus:ring-brand-rose outline-none transition-colors text-sm">
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-brand-muted mb-1.5 font-medium">Телефон / Telegram *</label>
+                  <input type="text" name="contact" required placeholder="+7 (999) 000-00-00 или @username" class="w-full px-4 py-3 rounded-xl bg-brand-surface border border-white/10 text-white placeholder-brand-muted/60 focus:border-brand-rose focus:ring-1 focus:ring-brand-rose outline-none transition-colors text-sm">
+                </div>
+                <div>
+                  <label class="block text-xs uppercase tracking-wider text-brand-muted mb-1.5 font-medium">Примерный тираж</label>
+                  <select name="quantity" class="w-full px-4 py-3 rounded-xl bg-brand-surface border border-white/10 text-white focus:border-brand-rose focus:ring-1 focus:ring-brand-rose outline-none transition-colors text-sm">
+                    <option value="10-30 шт.">10–30 шт. (Малый)</option>
+                    <option value="30-100 шт." selected>30–100 шт. (Средний)</option>
+                    <option value="100-300 шт.">100–300 шт. (Корпоративный)</option>
+                    <option value="300+ шт.">300+ шт. (Масштабный)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-wider text-brand-muted mb-1.5 font-medium">Какая продукция интересует?</label>
+                <input type="text" name="product" placeholder="Например: оверсайз худи, футболки и шопперы" class="w-full px-4 py-3 rounded-xl bg-brand-surface border border-white/10 text-white placeholder-brand-muted/60 focus:border-brand-rose focus:ring-1 focus:ring-brand-rose outline-none transition-colors text-sm">
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase tracking-wider text-brand-muted mb-1.5 font-medium">Комментарий / пожелания</label>
+                <textarea name="comment" rows="3" placeholder="Расскажите о вашем сообществе, сроках или прикрепите ссылку на референсы..." class="w-full px-4 py-3 rounded-xl bg-brand-surface border border-white/10 text-white placeholder-brand-muted/60 focus:border-brand-rose focus:ring-1 focus:ring-brand-rose outline-none transition-colors text-sm resize-none"></textarea>
+              </div>
+
+              <div class="pt-2">
+                <button type="submit" class="w-full py-4 rounded-full bg-brand-rose text-brand-black font-display font-bold text-xs uppercase tracking-wider hover:bg-brand-rose-hover transition-all duration-300 hover:shadow-glow-rose active:scale-95 flex items-center justify-center gap-2">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+                  </svg>
+                  Отправить заявку
+                </button>
+                <p class="text-[10px] text-brand-muted text-center mt-3">
+                  Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Конфиденциальность гарантируется.
+                </p>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 11. FOOTER -->
+  <footer class="bg-brand-dark border-t border-white/10 relative overflow-hidden">
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80vw] h-40 bg-brand-rose/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 relative z-10">
+      
+      <div class="text-center pb-14 border-b border-white/10">
+        <div class="w-12 h-12 mx-auto mb-6 text-brand-rose flex items-center justify-center">
+          <svg class="w-10 h-10 animate-spin-slow" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+          </svg>
+        </div>
+        <h2 class="font-display font-black text-3xl sm:text-5xl md:text-6xl text-white tracking-wider uppercase mb-4">
+          СПАСИБО ЗА ВНИМАНИЕ
+        </h2>
+        <p class="text-brand-cream/70 text-sm sm:text-base max-w-xl mx-auto">
+          «Знак Своих» — мы объединяем сообщества через вещи, которые хочется носить каждый день.
+        </p>
+      </div>
+
+      <!-- Authors & Supervisor Block (Strictly required in prompt) -->
+      <div class="grid md:grid-cols-3 gap-10 py-12 border-b border-white/10">
+        
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <svg class="w-5 h-5 text-brand-rose" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+            </svg>
+            <span class="font-display font-extrabold text-base text-white tracking-wider">ЗНАК СВОИХ</span>
+          </div>
+          <p class="text-xs text-brand-cream/70 leading-relaxed mb-4">
+            Студия кастомного стритвира и мерча полного цикла. От идеи и дизайн-кода до фабричного пошива и логистики.
+          </p>
+          <div class="text-xs text-brand-rose font-medium">
+            Сделано с любовью к деталям и ткани
+          </div>
+        </div>
+
+        <div>
+          <span class="text-xs uppercase tracking-widest text-brand-muted block font-semibold mb-3">
+            Авторы проекта:
+          </span>
+          <ul class="space-y-2 text-sm text-brand-cream font-medium">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-rose"></span>Гущина Анна</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-rose"></span>Мазилкина Полина</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-rose"></span>Лаврикова Анисия</li>
+          </ul>
+        </div>
+
+        <div>
+          <span class="text-xs uppercase tracking-widest text-brand-muted block font-semibold mb-3">
+            Руководитель проекта:
+          </span>
+          <p class="text-sm font-semibold text-white mb-4">Кондрик Александр Вячеславович</p>
+          
+          <div class="pt-3 border-t border-white/5 text-xs text-brand-cream/80 space-y-1">
+            <p><span class="text-brand-muted">Email:</span> hello@znaksvoih.ru</p>
+            <p><span class="text-brand-muted">Telegram:</span> @znaksvoih_studio</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-brand-muted gap-4">
+        <div>© 2026 Студия мерча «Знак Своих». Все права защищены.</div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-brand-rose transition-colors">Политика конфиденциальности</a>
+          <a href="#" class="hover:text-brand-rose transition-colors">Условия предзаказа</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- 12. CINEMATIC SHARED ELEMENT MORPHING MODAL CONTAINER -->
+  <div id="morphModalOverlay" class="morph-modal-overlay"></div>
+  <div id="morphModalCard" class="morph-modal-card" style="display: none;">
+    <div id="morphModalContent"></div>
+  </div>
+
+  <!-- 13. LEAD MODAL -->
+  <div id="leadModal" class="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-brand-black/85 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="relative w-full max-w-lg rounded-3xl bg-brand-dark border border-brand-rose/40 shadow-2xl p-6 sm:p-8 transform scale-95 transition-transform duration-300" id="modalCard">
+      
+      <button onclick="closeLeadModal()" class="absolute top-5 right-5 p-2 rounded-full text-brand-muted hover:text-white hover:bg-white/10 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="mb-6">
+        <div class="inline-flex items-center gap-2 text-brand-rose text-xs uppercase tracking-widest font-semibold mb-2">
+          <svg class="w-3.5 h-3.5 text-brand-rose" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+          </svg>
+          Знак Своих
+        </div>
+        <h3 class="font-display font-bold text-2xl text-white mb-1" id="modalTitle">Оставить заявку</h3>
+        <p class="text-xs text-brand-cream/70" id="modalSubtitle">Свяжемся с вами в течение 30 минут и ответим на все вопросы</p>
+      </div>
+
+      <form id="modalForm" onsubmit="handleModalSubmit(event)" class="space-y-4">
+        <input type="hidden" name="source" id="modalSource" value="Модальное окно">
+        
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-brand-muted mb-1 font-medium">Ваше имя *</label>
+          <input type="text" name="name" required placeholder="Иван или Анна" class="w-full px-4 py-3 rounded-xl bg-brand-surface border border-white/10 text-white placeholder-brand-muted/60 focus:border-brand-rose focus:ring-1 focus:ring-brand-rose outline-none transition-colors text-sm">
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-brand-muted mb-1 font-medium">Телефон или Telegram *</label>
+          <input type="text" name="contact" required placeholder="+7 (999) 000-00-00 или @telegram" class="w-full px-4 py-3 rounded-xl bg-brand-surface border border-white/10 text-white placeholder-brand-muted/60 focus:border-brand-rose focus:ring-1 focus:ring-brand-rose outline-none transition-colors text-sm">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-brand-muted mb-1 font-medium">Изделие</label>
+            <select name="productType" id="modalProductSelect" class="w-full px-3 py-3 rounded-xl bg-brand-surface border border-white/10 text-white focus:border-brand-rose focus:ring-1 focus:ring-brand-rose outline-none transition-colors text-xs">
+              <option value="Худи и свитшоты" selected>Худи & Свитшоты</option>
+              <option value="Футболки">Футболки (Boxy / Relaxed)</option>
+              <option value="Рубашки">Рубашки & Овершоты</option>
+              <option value="Джинсы и брюки">Джинсы & Брюки карго</option>
+              <option value="Письменные принадлежности">Канцелярия (блокноты, ручки)</option>
+              <option value="Аксессуары (кепки, носки, шопперы)">Аксессуары (кепки, шопперы)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-brand-muted mb-1 font-medium">Тираж</label>
+            <select name="qty" id="modalQtySelect" class="w-full px-3 py-3 rounded-xl bg-brand-surface border border-white/10 text-white focus:border-brand-rose focus:ring-1 focus:ring-brand-rose outline-none transition-colors text-xs">
+              <option value="10-25 шт.">10–25 шт.</option>
+              <option value="25-50 шт." selected>25–50 шт.</option>
+              <option value="50-100 шт.">50–100 шт.</option>
+              <option value="100+ шт.">100+ шт.</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-brand-muted mb-1 font-medium">Комментарий / пожелания</label>
+          <textarea name="notes" rows="2" placeholder="Какое сообщество, есть ли логотип, нужные сроки..." class="w-full px-4 py-2.5 rounded-xl bg-brand-surface border border-white/10 text-white placeholder-brand-muted/60 focus:border-brand-rose focus:ring-1 focus:ring-brand-rose outline-none transition-colors text-sm resize-none"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-full bg-brand-rose text-brand-black font-display font-bold text-xs uppercase tracking-wider hover:bg-brand-rose-hover transition-all duration-300 hover:shadow-glow-rose active:scale-95 flex items-center justify-center gap-2 mt-4">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C12 7.2 7.2 12 0 12C7.2 12 12 16.8 12 24C12 16.8 16.8 12 24 12C16.8 12 12 7.2 12 0Z"/>
+          </svg>
+          Отправить заявку
+        </button>
+      </form>
+
+      <!-- Success State inside Modal -->
+      <div id="modalSuccess" class="hidden text-center py-8">
+        <div class="w-16 h-16 rounded-full bg-brand-rose/20 text-brand-rose flex items-center justify-center mx-auto mb-4">
+          <i data-lucide="check" class="w-8 h-8"></i>
+        </div>
+        <h4 class="font-display font-bold text-2xl text-white mb-2">Заявка принята!</h4>
+        <p class="text-sm text-brand-cream/80 max-w-xs mx-auto mb-6">
+          Спасибо за обращение в «Знак Своих». Наш ведущий дизайнер уже изучает детали и свяжется с вами.
+        </p>
+        <button onclick="closeLeadModal()" class="px-6 py-2.5 rounded-full border border-brand-rose text-brand-rose hover:bg-brand-rose hover:text-brand-black transition-colors text-xs uppercase tracking-wider font-semibold">
+          Закрыть
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="fixed bottom-6 right-6 z-[10001] flex flex-col gap-3 pointer-events-none"></div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>

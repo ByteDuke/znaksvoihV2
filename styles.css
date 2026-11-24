@@ -1,0 +1,463 @@
+/* ==========================================================================
+   ЗНАК СВОИХ (OUR OWN SIGN) — Master Stylesheet & Cinematic Motion Engine
+   Brand Identity: Obsidian Matte (#0E0E11), Cream (#F5F0E6), Dusty Rose (#DDBFB4)
+   ========================================================================== */
+
+@charset "UTF-8";
+
+/* Base Resets & Luxury Dark Background (No Noise Speckles) */
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #0E0E11;
+  background-image: 
+    radial-gradient(circle at 12% 8%, rgba(221, 191, 180, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 88% 82%, rgba(221, 191, 180, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(245, 240, 230, 0.02) 0%, transparent 70%),
+    linear-gradient(180deg, #0C0C0E 0%, #111114 50%, #0E0E11 100%);
+  background-attachment: fixed;
+  color: #F5F0E6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Custom Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0E0E11;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262428;
+  border-radius: 9999px;
+  border: 1px solid #0E0E11;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #DDBFB4;
+}
+
+/* Ambient Moving Mesh Orbs */
+@keyframes ambientDriftOne {
+  0% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(45px, -35px) scale(1.08); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+@keyframes ambientDriftTwo {
+  0% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(-35px, 45px) scale(1.06); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.ambient-orb-1 {
+  animation: ambientDriftOne 25s ease-in-out infinite;
+}
+
+.ambient-orb-2 {
+  animation: ambientDriftTwo 30s ease-in-out infinite;
+}
+
+/* Entrance Hero Animations */
+@keyframes heroBgZoom {
+  0% {
+    transform: scale(1.1);
+    filter: brightness(0.2) contrast(1.15);
+  }
+  100% {
+    transform: scale(1.0);
+    filter: brightness(0.28) contrast(1.08);
+  }
+}
+
+.animate-hero-bg {
+  animation: heroBgZoom 2.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes heroContentSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-title {
+  animation: heroContentSlideUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-hero-subtitle {
+  animation: heroContentSlideUp 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+.animate-hero-cta {
+  animation: heroContentSlideUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 22s linear infinite;
+}
+
+/* Shared Element Transition & Morphing Card Modal */
+.morph-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(10, 10, 13, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.morph-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.morph-modal-card {
+  position: fixed;
+  z-index: 10000;
+  background: #141418;
+  border: 1px solid rgba(221, 191, 180, 0.35);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8), 0 0 35px rgba(221, 191, 180, 0.15);
+  overflow: hidden;
+  transition: all 0.48s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: top, left, width, height, transform, border-radius;
+}
+
+.morph-modal-card.expanded {
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: min(92vw, 1060px) !important;
+  height: min(92vh, 850px) !important;
+  border-radius: 1.75rem !important;
+}
+
+@media (max-width: 640px) {
+  .morph-modal-card.expanded {
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    border-radius: 0 !important;
+    border: none !important;
+  }
+}
+
+/* Sliding Pill Tab Indicator for Gender */
+.gender-switch-container {
+  position: relative;
+  display: inline-flex;
+  padding: 6px;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+}
+
+.gender-tab-pill {
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  width: calc(50% - 6px);
+  border-radius: 0.85rem;
+  background: #DDBFB4;
+  box-shadow: 0 0 25px rgba(221, 191, 180, 0.35);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gender-switch-container.women-active .gender-tab-pill {
+  transform: translateX(100%);
+}
+
+.gender-btn {
+  position: relative;
+  z-index: 2;
+  padding: 12px 32px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(245, 240, 230, 0.65);
+  transition: color 0.3s ease;
+}
+
+.gender-btn.active {
+  color: #0E0E11 !important;
+}
+
+/* Cascading Scroll Animation */
+.product-card {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+  will-change: opacity, transform;
+}
+
+.product-card.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(221, 191, 180, 0.45);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7), 0 0 25px -5px rgba(221, 191, 180, 0.2);
+}
+
+/* Brand Stamps & Overlays */
+.brand-embroidery-stamp {
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(14, 14, 17, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(221, 191, 180, 0.35);
+  border-radius: 9999px;
+  padding: 4px 10px;
+  color: #DDBFB4;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .brand-embroidery-stamp {
+  border-color: #DDBFB4;
+  background: rgba(20, 20, 24, 0.95);
+  box-shadow: 0 0 15px rgba(221, 191, 180, 0.3);
+  transform: translateY(-2px);
+}
+
+.garment-star-overlay {
+  position: absolute;
+  pointer-events: none;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
+  opacity: 0.9;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.group:hover .garment-star-overlay {
+  opacity: 1;
+  transform: scale(1.12);
+}
+
+/* Lookbook Card */
+.lookbook-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background: #141418;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.lookbook-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(221, 191, 180, 0.5);
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.7), 0 0 25px rgba(221, 191, 180, 0.18);
+}
+
+/* Calculator Active Styles */
+.calc-btn.active {
+  background-color: #DDBFB4 !important;
+  border-color: #DDBFB4 !important;
+}
+
+.calc-btn.active span {
+  color: #0E0E11 !important;
+}
+
+.calc-btn {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.calc-btn:hover:not(.active) {
+  border-color: rgba(221, 191, 180, 0.5);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.calc-print-btn.active {
+  background-color: rgba(221, 191, 180, 0.2) !important;
+  border-color: #DDBFB4 !important;
+}
+
+.calc-print-btn.active .font-bold {
+  color: #DDBFB4 !important;
+}
+
+.calc-print-btn {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.calc-print-btn:hover:not(.active) {
+  border-color: rgba(221, 191, 180, 0.4);
+}
+
+/* Range input custom slider */
+input[type=range] {
+  -webkit-appearance: none;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #DDBFB4;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(221, 191, 180, 0.5);
+  border: 2px solid #0E0E11;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background: #ffffff;
+}
+
+/* ==========================================================================
+   INTERACTIVE 2D CLOTHES RACK HERO (PURE SVG TECHNICAL SKETCHES)
+   ========================================================================== */
+.rack-perspective {
+  perspective: 1200px;
+  perspective-origin: 50% 20%;
+  transform-style: preserve-3d;
+}
+
+.rack-garment-item {
+  position: absolute;
+  top: 0;
+  width: 290px;
+  height: 380px;
+  transform-origin: top center;
+  transition: transform 0.65s cubic-bezier(0.18, 0.89, 0.32, 1.15),
+              filter 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  will-change: transform, opacity, filter;
+  touch-action: pan-y;
+}
+
+@media (max-width: 640px) {
+  .rack-garment-item {
+    width: 215px;
+    height: 295px;
+  }
+}
+
+/* 3D Flipper for Front / Back rotation */
+.garment-flipper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(0.2, 0.9, 0.3, 1);
+  will-change: transform;
+}
+
+.garment-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.garment-face.garment-back {
+  transform: rotateY(180deg);
+}
+
+/* Realistic Fashion Paper Hang-Tag */
+.paper-hang-tag {
+  position: absolute;
+  right: -55px;
+  top: 75px;
+  width: 96px;
+  background: #FAF8F4;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  box-shadow: 0 18px 30px -6px rgba(0, 0, 0, 0.22), 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 10px 8px;
+  font-family: 'Inter', sans-serif;
+  transform: rotate(3.5deg);
+  transform-origin: 20px -10px;
+  transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.15);
+  z-index: 35;
+  pointer-events: none;
+  opacity: 0;
+}
+
+@media (max-width: 640px) {
+  .paper-hang-tag {
+    right: -25px;
+    top: 55px;
+    width: 82px;
+    padding: 8px 6px;
+    transform: rotate(2deg) scale(0.88);
+  }
+}
+
+/* Eyelet & Cord */
+.hang-tag-cord {
+  position: absolute;
+  top: -24px;
+  left: 20px;
+  width: 2px;
+  height: 26px;
+  background: #2C2C2E;
+  transform: rotate(-12deg);
+}
+
+.hang-tag-eyelet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #D4AF37;
+  border: 1.5px solid #8C7320;
+  margin: 0 auto 6px auto;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+}
